@@ -15,14 +15,14 @@ class HelloWorld {
     }
     double amax = a[0];
     int imax = 0;
-    for (int i = 1; i < 5; i++){
+    for (int i = 1; i < size; i++){
         if (a[i] >= amax){
             amax = a[i];
             imax = i;
         }
     }
     double amin = a[imax];
-    for (int i = imax; i < 5; i++){
+    for (int i = imax; i < size; i++){
         if (a[i] <= amin){
             amin = a[i];
         }
