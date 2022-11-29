@@ -22,11 +22,17 @@ class HelloWorld {
         }
     }
     double amin = a[imax];
+    int imin = 0;
     for (int i = imax; i < size; i++){
         if (a[i] <= amin){
             amin = a[i];
+            imin = i;
         }
     }
-    Console.WriteLine(amax + " " + amin);
+    double p;
+    p = a[imax]; a[imax] = a[imin]; a[imin] = p;
+    foreach (double x in a)
+        Console.Write("{0} ", x);
+    Console.WriteLine();
   }
 }
